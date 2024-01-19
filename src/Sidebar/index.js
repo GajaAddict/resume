@@ -63,9 +63,7 @@ const Button = styled.button`
 const SidebarContainer = styled.div`
   background-color: var(--black);
   width: 3.5rem;
-  height: 80vh;
-  margin-top: 1rem;
-  border-radius: 0 30px 30px 0;
+  height: 100vh;
   padding: 1rem 0;
 
   display: flex;
@@ -227,13 +225,7 @@ const Sidebar = () => {
 
   return (
     <Container>
-      <Button clicked={click} onClick={() => handleClick()}>
-        Click
-      </Button>
       <SidebarContainer>
-        <Logo>
-          <img src={logo} alt="logo" />
-        </Logo>
         <SlickBar clicked={click}>
           <Item
             onClick={() => setClick(false)}
@@ -247,54 +239,12 @@ const Sidebar = () => {
           <Item
             onClick={() => setClick(false)}
             activeClassName="active"
-            to="/team"
-          >
-            <img src={Team} alt="Team" />
-            <Text clicked={click}>Team</Text>
-          </Item>
-          <Item
-            onClick={() => setClick(false)}
-            activeClassName="active"
-            to="/calender"
-          >
-            <img src={Calender} alt="Calender" />
-            <Text clicked={click}>Calender</Text>
-          </Item>
-          <Item
-            onClick={() => setClick(false)}
-            activeClassName="active"
-            to="/documents"
+            to="/recognition"
           >
             <img src={Documents} alt="Documents" />
-            <Text clicked={click}>Documents</Text>
-          </Item>
-          <Item
-            onClick={() => setClick(false)}
-            activeClassName="active"
-            to="/projects"
-          >
-            <img src={Projects} alt="Projects" />
-            <Text clicked={click}>Projects</Text>
+            <Text clicked={click}>Recognition</Text>
           </Item>
         </SlickBar>
-
-        <Profile clicked={profileClick}>
-          <img
-            onClick={() => handleProfileClick()}
-            src="https://picsum.photos/200"
-            alt="Profile"
-          />
-          <Details clicked={profileClick}>
-            <Name>
-              <h4>Jhon&nbsp;Doe</h4>
-              <a href="/#">view&nbsp;profile</a>
-            </Name>
-
-            <Logout>
-              <img src={PowerOff} alt="logout" />
-            </Logout>
-          </Details>
-        </Profile>
       </SidebarContainer>
     </Container>
   );

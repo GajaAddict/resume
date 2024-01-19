@@ -1,10 +1,7 @@
 import { Route, Routes, useLocation } from "react-router";
 import Sidebar from "./Sidebar";
 import Home from "./Pages/Home";
-import Team from "./Pages/Team";
-import Calender from "./Pages/Calender";
 import Documents from "./Pages/Documents";
-import Projects from "./Pages/Projects";
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion";
 
@@ -33,10 +30,7 @@ function App() {
         <AnimatePresence mode="wait">
           <Routes>  {/* location={location} key={location.pathname} */}
             <Route exact path="/resume" element={<Home />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/calender" element={<Calender />} />
-            <Route path="/documents" element={<Documents />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/recognition" element={<Documents />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </AnimatePresence>
