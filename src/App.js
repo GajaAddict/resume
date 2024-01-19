@@ -25,17 +25,19 @@ const Pages = styled.div`
 
 function App() {
   const location = useLocation();
+
   return (
     <>
       <Sidebar />
       <Pages>
         <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route exact path="/" element={<Home />} />
+          <Routes>  {/* location={location} key={location.pathname} */}
+            <Route exact path="/resume" element={<Home />} />
             <Route path="/team" element={<Team />} />
             <Route path="/calender" element={<Calender />} />
             <Route path="/documents" element={<Documents />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </AnimatePresence>
       </Pages>
