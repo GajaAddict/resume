@@ -2,16 +2,16 @@ import React from "react";
 // import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 // import reportWebVitals from './reportWebVitals';
 import { createRoot } from "react-dom/client";
 
 const domNode = document.getElementById("root");
 const root = createRoot(domNode);
 root.render(
-  <BrowserRouter basename="/resume">
+  <HashRouter>  {/* basename="/resume" */}
     <App />
-  </BrowserRouter>
+  </HashRouter>
 );
 
 // ReactDOM.render(

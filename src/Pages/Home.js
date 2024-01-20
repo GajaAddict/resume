@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import MotionHoc from "./MotionHoc";
-import Resume from '../assets/pdf/Gajendran_resume.pdf'
+import resumeFile from '../assets/pdf/Gajendran_resume.pdf'
 
 const HomeComponent = React.memo(() => {
   return (
-    <div>
-      <iframe src={Resume} width="100%" height="500vh" />
+    <div style={{ width: '100%', height: "100vh" }}>
+      <iframe src={resumeFile} width="100%" height="100%" />
     </div>
   )
 }
 )
 
-const Home = MotionHoc(HomeComponent);
+// const Home = MotionHoc(HomeComponent);
 
-export default Home;
+export default HomeComponent;

@@ -26,15 +26,15 @@ function App() {
   return (
     <>
       <Sidebar />
-      <Pages>
-        <AnimatePresence mode="wait">
-          <Routes>  {/* location={location} key={location.pathname} */}
-            <Route exact path="/resume" element={<Home />} />
-            <Route path="/recognition" element={<Documents />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </AnimatePresence>
-      </Pages>
+      {/* <Pages> */}
+      <AnimatePresence mode="wait">
+        <Routes>  {/* location={location} key={location.pathname} */}
+          <Route path="/" element={<Home />} />
+          <Route path="/recognition" element={<Documents />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </AnimatePresence>
+      {/* </Pages> */}
     </>
   );
 }
