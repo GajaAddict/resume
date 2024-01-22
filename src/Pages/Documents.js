@@ -1,15 +1,15 @@
 import React, { useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
 import MotionHoc from "./MotionHoc";
+import tcs from "./../assets/Awards/tcs.jpg";
+// import verizon from "./../assets/Awards/verizon.jpg";
 
 const DocumentsComponent = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
   const images = [
-    "https://placehold.co/600x400",
-    "https://placehold.co/600x400",
-    "https://placehold.co/600x400",
-    "https://placehold.co/600x400"
+    tcs,
+    // verizon
   ];
 
   const openImageViewer = useCallback((index) => {
