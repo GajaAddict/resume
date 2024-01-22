@@ -27,13 +27,15 @@ function App() {
     <>
       <Sidebar />
       {/* <Pages> */}
-      <AnimatePresence mode="wait">
-        <Routes>  {/* location={location} key={location.pathname} */}
-          <Route path="/" element={<Home />} />
-          <Route path="/recognition" element={<Documents />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
-      </AnimatePresence>
+      <div style={{ paddingLeft: '54px' }}>
+        <AnimatePresence mode="wait">
+          <Routes>  {/* location={location} key={location.pathname} */}
+            <Route path="/" element={<Home />} />
+            <Route path="/recognition" element={<Documents />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </AnimatePresence>
+      </div>
       {/* </Pages> */}
     </>
   );
